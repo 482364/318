@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>HOME</title>
+    <link rel="icon" type="image/x-icon" href="stra.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="homepage">
+    <header>
+    <div class="banner">
+    <video autoplay loop muted>
+        <source src="office.mp4" type="video/mp4">
+    </video>
+    <div class="menu-bar">
+      <a href="home.html" class="logo">nhshila.</a>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About me</a></li>
+        <li><a href="about.html#education">Education</a></li>
+        <li><a href="about.html#skills">Skills</a></li>
+        <li><a href="about.html#experience">Experience</a></li>
+        <li><a href="about.html#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <h1>MY RESUME</h1>
+      <p>This is my personal resume website. <br> Know more about me.</p>
+    <audio controls loop>
+      <source src="time.mp3" type="audio/mpeg">
+    </audio>
+    </div>
+    </header>
+    </div>
+
+    <div class="time">
+    <div id="clock"></div>
+    </div>
+    <script>
+    function updateClock() {
+    const clock = document.getElementById('clock');
+    const now = new Date();
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+
+    hours = hours < 10 ? '0' + hours : hours;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    clock.textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    setInterval(updateClock, 1000);
+
+    updateClock();
+    </script>
+
+<footer>
+    <p>&copy;2024 - Shellout Co.</p>
+</footer>
+</body> 
+</html>
